@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            function hcountry()
+        {
+            var city = 
+        {
+            pakcity : 
+            {
+                title : "City",
+                city1 : "Karachi",
+                city2 : "Lahore",
+                city3 : "Multan",
+            },
+            chcity : 
+            {
+                title : "City",
+                city1 : "chongqing",
+                city2 : "XiAn",
+                city3 : "Shanghai",
+            },
+            indcity : 
+            {
+                title : "City",
+                city1 : "Mumbai",
+                city2 : "Kolkata",
+                city3 : "Jaipur",
+            },
+            malcity : 
+            {
+                title : "City",
+                city1 : "Kuching",
+                city2 : "George Town",
+                city3 : "Kuala Lumpur",
+            }
+        }
+            var allcountry = document.getElementById("country").value;
+            if(allcountry == "Pakistan")
+            {
+                var cc = document.getElementById("concity");
+                cc.innerHTML =  "<p>Please selcet your city:</p>" 
+                + "<select>"
+                    +"<option>" + city.pakcity.title +"</option>"
+                    +"<option>" + city.pakcity.city1 +"</option>"
+                    +"<option>" + city.pakcity.city2 +"</option>"
+                    +"<option>" + city.pakcity.city3 +"</option>"
+                    +"</select>";
+                    if(cc = "Karachi")
+                    {
+                    var hc = document.getElementById("allhcity").innerHTML = "This is your homeland Karachi";
+                    }
+                    else if(cc = "Lahore")
+                    {
+                    var hc = document.getElementById("allhcity").innerHTML = "This is your homeland Lahore";
+                    }
+            }
+            else if(allcountry == "Chaina")
+            {
+                var cc = document.getElementById("concity");
+                cc.innerHTML =  "<p>Please selcet your city:</p>" 
+                +"<select>"
+                    +"<option>" + city.pakcity.title +"</option>"
+                    +"<option>" + city.chcity.city1 +"</option>"
+                    +"<option>" + city.chcity.city2 +"</option>"
+                    +"<option>" + city.chcity.city3 +"</option>"
+                    +"</select>";
+            }
+            else if(allcountry == "India")
+            {
+                var cc = document.getElementById("concity");
+                cc.innerHTML =  "<p>Please selcet your city:</p>" 
+                +  "<select>"
+                    +"<option>" + city.pakcity.title +"</option>"
+                    +"<option>" + city.indcity.city1 +"</option>"
+                    +"<option>" + city.indcity.city2 +"</option>"
+                    +"<option>" + city.indcity.city3 +"</option>"
+                    +"</select>";
+            }
+            else if(allcountry == "Malaysia")
+            {
+                var cc = document.getElementById("concity");
+                cc.innerHTML =  "<p>Please selcet your city:</p>" 
+                + "<select>"
+                    +"<option>" + city.pakcity.title +"</option>"
+                    +"<option>" + city.malcity.city1 +"</option>"
+                    +"<option>" + city.malcity.city2 +"</option>"
+                    +"<option>" + city.malcity.city3 +"</option>"
+                    +"</select>";
+            }
+            else
+            {
+                var cc = document.getElementById("concity");
+                cc.innerHTML =  "<p>Please selcet your city:</p>" 
+                + "<select>"
+                    +"<option>" + city.pakcity.title +"</option>"
+                    +"</select>";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <p>Select your asian country</p>
+        <select onchange="hcountry()" id="country">
+            <option value="country">Country</option>
+            <option value="Pakistan">Pakistan</option>
+            <option value="Chaina">Chaina</option>
+            <option value="India">India</option>
+            <option value="Malaysia">Malaysia</option>
+        </select>
+                <div id="concity" onchange="hcity()"></div>
+                <br>
+                    <p id="allhcity"></p>
+</form>
+</body>
+</html>
